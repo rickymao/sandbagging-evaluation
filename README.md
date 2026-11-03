@@ -15,6 +15,7 @@ uv run jupyter lab notebooks/sandbagging_eval.ipynb
 ## Notebook layout
 
 1. Setup · 2. **Config** (`EvalConfig` — models, dataset, conditions, limits) · 3. Dataset (toy / WMDP / MMLU / GPQA)
+
 4. Tasks (one per condition) · 5. Run (`eval_set`, resumable) · 6. Results (accuracy + gap) · 7. Per-sample flips
 
 Smoke test with `models=["mockllm/model"], dataset="toy"` (no API cost).
