@@ -8,18 +8,21 @@ is the sandbagging signal.
 
 ```bash
 uv sync
-cp .env.example .env   # add API keys
+touch .env   # add API keys
 uv run jupyter lab notebooks/sandbagging_eval.ipynb
 ```
 
 ## Notebook layout
 
-1. Setup · 2. **Config** (`EvalConfig` — models, dataset, conditions, limits) · 3. Dataset (toy / WMDP / MMLU)
+1. Setup · 2. **Config** (`EvalConfig` — models, dataset, conditions, limits) · 3. Dataset (toy / WMDP / MMLU / GPQA)
 4. Tasks (one per condition) · 5. Run (`eval_set`, resumable) · 6. Results (accuracy + gap) · 7. Per-sample flips
 
 Smoke test with `models=["mockllm/model"], dataset="toy"` (no API cost).
 
 ## Viewing logs
+
+
+In the root of this repository run:
 
 ```bash
 uv run inspect view --log-dir logs/
