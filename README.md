@@ -8,7 +8,7 @@ is the sandbagging signal.
 
 ```bash
 uv sync
-touch .env   # add API keys
+touch .env   # add API keys: ANTHROPIC_API_KEY, OPENAI_API_KEY, GOOGLE_API_KEY, XAI_API_KEY
 uv run jupyter lab notebooks/sandbagging_eval.ipynb
 ```
 
@@ -21,6 +21,9 @@ uv run jupyter lab notebooks/sandbagging_eval.ipynb
 5. Run (`eval_set`, resumable)
 6. Results (accuracy + gap)
 7. Per-sample flips
+
+Supported providers include `anthropic/`, `openai/`, `google/` (Gemini) and `grok/` (xAI), e.g.
+`models=["google/gemini-2.5-pro", "grok/grok-4"]`.
 
 Smoke test with `models=["mockllm/model"], dataset="toy"` (no API cost).
 
